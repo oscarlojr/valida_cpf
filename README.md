@@ -1,4 +1,4 @@
-# Projeto Feedback Screenshot (PARTE FRONTEND)
+# Projeto validador de CPF
 <p align="center"> Projeto destinado a criação de Validador de CPF. Atividade realizada pelo na plataforma Gama Academy - Hiring Coders .
 </p>
 
