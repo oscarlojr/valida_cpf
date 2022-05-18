@@ -3,7 +3,7 @@
 </p>
 
  <p align="center"> 
- :fire: Proposta do projeto :nerd_face:
+ :test_tube: Proposta do projeto :nerd_face:
 </p>
 
  <h1 align="center"> 
