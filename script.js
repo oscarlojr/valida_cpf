@@ -2,8 +2,6 @@ console.log('Iniciando o arquivo JS');
 
 function validaCPF(cpf){
 
-  console.log(cpf.length);
-
   if (cpf.length != 11) {
     return false;
   } else {
@@ -46,14 +44,12 @@ function validaCPF(cpf){
 }
 
 function validacao(){
-  console.log('Iniciando validação CPF');
 
-  //Limpa tela das mensagens de cpf correto ou incorreto
+    //Limpa tela das mensagens de cpf correto ou incorreto
   document.getElementById('success').style.display = 'none';
   document.getElementById('error').style.display = 'none';
 
   var cpf = document.getElementById('cpf_digitado').value;
-  console.log(cpf)
 
   var resultadoValidacao = validaCPF(cpf);
 
@@ -62,5 +58,12 @@ function validacao(){
   } else {
     document.getElementById('error').style.display ='block'
   }
-
 }
+
+// implementação de resultado com botão enter
+document.addEventListener('keypress', function(e) {
+  if(e.key === 'Enter') {
+    var btn = document.querySelector('.btn');    
+    btn.click(); 
+  }
+});
