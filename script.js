@@ -16,8 +16,30 @@ function validaCPF(cpf){
         soma += numeros.charAt(10 - i) * i;
       }
 
-      console.log(soma);
+      //Captura do primeiro dígito
+      var resultado = (soma % 11) < 2 ? 0 : 11 - (soma % 11);
 
+      //Validação do primeiro dígito
+      if ( resultado != digitos.charAt(0)) {
+        return false;
+      }
+
+      // resetando a variável
+      soma = 0;
+      numeros = cpf.substring(0,10);
+
+      for (var k = 11; k > 1; k--) {
+        soma += numeros.charAt(11 - k) * k;
+      }
+
+      //Captura do segundo dígito
+      resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+
+      //Validação do segundo dígito
+      if(resultado != digitos.charAt(1)){
+        return false;
+      }
+      
     return true;
   }
   
@@ -25,6 +47,10 @@ function validaCPF(cpf){
 
 function validacao(){
   console.log('Iniciando validação CPF');
+
+  //Limpa tela das mensagens de cpf correto ou incorreto
+  document.getElementById('success').style.display = 'none';
+  document.getElementById('error').style.display = 'none';
 
   var cpf = document.getElementById('cpf_digitado').value;
   console.log(cpf)
