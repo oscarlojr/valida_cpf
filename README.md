@@ -6,9 +6,9 @@
  :test_tube: Proposta do projeto :nerd_face:
 </p>
 
- <h1 align="center"> 
+ <p align="center"> 
   <img alt="Tela de validação de CPF" title="#tela de validação de CPF" src="./img/valida_cpf.gif" />
-</h1>
+</p>
 
 ## :gear: Funcionalidades do projeto
 
